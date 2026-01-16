@@ -1,17 +1,119 @@
-/* Import Inter font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+/* Small set of semantic utilities layered on top of Tailwind classes */
 
-/* Base Overrides */
-body {
-    font-family: 'Inter', sans-serif;
+.container-page {
+  /* Responsive container similar to MynaUI / modern design systems */
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
-/* Optional: Smooth Scrolling */
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #020618;
+  line-height: 1.25rem;
+}
+.nav-link:hover,
+.nav-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.mobile-nav-link {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #020618;
+  background: white;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus-visible {
+  background: #f8fafc;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  user-select: none;
+  text-decoration: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #2a52be;
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: #2a52be;
+  color: #f8fafc;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #020618;
+}
+.btn-ghost:hover {
+  background: #f8fafc;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #020618;
+}
+.btn-outline:hover {
+  background: #f8fafc;
+}
+
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.icon-badge {
+  display: inline-flex;
+  border-radius: 0.75rem;
+  background: #eff6ff; /* blue-50 */
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.feature-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Optional: prevent layout shift when body scrollbar appears */
 html {
-    scroll-behavior: smooth;
-}
-
-/* Custom Utilities for hamburger menu animation if needed in future */
-.menu-open {
-    display: block;
+  scrollbar-gutter: stable;
 }
