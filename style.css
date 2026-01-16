@@ -1,55 +1,17 @@
-/* Custom-only: animations + nicer scrollbars (no layout rules) */
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
-:root {
-  color-scheme: light;
-}
-
-html.dark {
-  color-scheme: dark;
+/* Base Overrides */
+body {
+    font-family: 'Inter', sans-serif;
 }
 
-/* Smooth mobile menu reveal */
-@keyframes slideDownFade {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Optional: Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
-.menu-animate {
-  animation: slideDownFade 220ms ease-out;
-}
-
-/* Subtle scrollbar styling */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(42, 82, 190, 0.45) rgba(148, 163, 184, 0.25);
-}
-
-html.dark * {
-  scrollbar-color: rgba(42, 82, 190, 0.6) rgba(15, 23, 42, 0.6);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(148, 163, 184, 0.18);
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(42, 82, 190, 0.45);
-  border-radius: 999px;
-  border: 2px solid rgba(148, 163, 184, 0.12);
-}
-html.dark ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.55);
-}
-html.dark ::-webkit-scrollbar-thumb {
-  background: rgba(42, 82, 190, 0.6);
-  border: 2px solid rgba(15, 23, 42, 0.55);
+/* Custom Utilities for hamburger menu animation if needed in future */
+.menu-open {
+    display: block;
 }
