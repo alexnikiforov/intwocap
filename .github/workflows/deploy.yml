@@ -22,6 +22,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v2
+        with:
+            path: ./web           # Your sub-folder name
+            package-manager: npm  # <--- ADD THIS LINE
 
 
   deploy:
